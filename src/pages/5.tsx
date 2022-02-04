@@ -32,10 +32,10 @@ const Page: NextPage = () => {
 
   return (
     <motion.div
-      initial={{ y: 1000 }}
-      animate={{ y: 0 }}
-      exit={{ y: -1000 }}
-      transition={{ duration: 1.5, times: [0, 0.5, 1] }}
+      initial={{ x: 1500 }}
+      animate={{ x: 0 }}
+      exit={{ x: -1500 }}
+      transition={{ duration: 1, times: [0, 0.2, 1] }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -56,10 +56,10 @@ const Page: NextPage = () => {
               variants={list}
               className='m-auto w-5/6 list-disc'
             >
-              <motion.li variants={item1} transition={{ duration: 2 }} className='my-10 text-5xl'>
+              <motion.li variants={item1} transition={{ duration: 3 }} className='my-10 text-5xl'>
                 不要品処理ルールの維持が出来ている
               </motion.li>
-              <motion.li variants={item2} transition={{ duration: 3 }} className='my-10 text-5xl'>
+              <motion.li variants={item2} transition={{ duration: 4 }} className='my-10 text-5xl'>
                 定期的な不具合の発見、改善が継続して行われている
               </motion.li>
             </motion.ul>

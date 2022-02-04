@@ -10,10 +10,10 @@ const Page: NextPage = () => {
 
   return (
     <motion.div
-      initial={{ y: 1000 }}
-      animate={{ y: 0 }}
-      exit={{ y: -1000 }}
-      transition={{ duration: 1, times: [0, 0.5, 1] }}
+      initial={{ x: 1500 }}
+      animate={{ x: 0 }}
+      exit={{ x: -1500 }}
+      transition={{ duration: 1, times: [0, 0.2, 1] }}
     >
       <Head>
         <title>5S活動発表</title>

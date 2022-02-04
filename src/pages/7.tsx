@@ -32,10 +32,10 @@ const Page: NextPage = () => {
 
   return (
     <motion.div
-      initial={{ y: 1200 }}
-      animate={{ y: 0 }}
-      exit={{ y: -1000 }}
-      transition={{ duration: 1.5, times: [0, 0.5, 1] }}
+      initial={{ x: 1500 }}
+      animate={{ x: 0 }}
+      exit={{ x: -1500 }}
+      transition={{ duration: 1, times: [0, 0.2, 1] }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -56,13 +56,13 @@ const Page: NextPage = () => {
               variants={list}
               className='m-auto w-5/6 list-disc'
             >
-              <motion.li variants={item1} className='my-10 text-5xl' transition={{ duration: 2 }}>
+              <motion.li variants={item1} className='my-10 text-5xl' transition={{ duration: 3 }}>
                 対象物の３定不具合の改善を分担し（定位置、定量、定時）終了している
               </motion.li>
-              <motion.li variants={item2} className='my-10 text-5xl' transition={{ duration: 3 }}>
+              <motion.li variants={item2} className='my-10 text-5xl' transition={{ duration: 4 }}>
                 共用書類、本類のロケーション不具合の改善もされている
               </motion.li>
-              <motion.li variants={item3} className='my-10 text-5xl' transition={{ duration: 4 }}>
+              <motion.li variants={item3} className='my-10 text-5xl' transition={{ duration: 5 }}>
                 ロケーション毎の責任者は明示されており、責任者の任務が実施されている
               </motion.li>
             </motion.ul>

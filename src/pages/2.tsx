@@ -8,12 +8,17 @@ import { useState } from 'react';
 const Page: NextPage = () => {
   const [count, setCount] = useState<number>(2);
 
+  const delay = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
   return (
     <motion.div
-      initial={{ y: 1000 }}
-      animate={{ y: 0 }}
-      exit={{ y: -1000 }}
-      transition={{ duration: 1, times: [0, 0.5, 1] }}
+      initial={{ x: 1500 }}
+      animate={{ x: 0 }}
+      exit={{ x: -1500 }}
+      transition={{ duration: 1, times: [0, 0.2, 1] }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -29,7 +34,15 @@ const Page: NextPage = () => {
           <div className='m-auto text-center'>
             <div className='text-6xl'>銀賞獲得の為には</div>
             <div className='my-10 text-9xl'>銅賞水準の維持</div>
-            <div className='text-6xl'>に加えて次の要素が必要</div>
+            <motion.div
+              className='text-6xl'
+              variants={delay}
+              transition={{ ease: 'easeIn', delay: 2, duration: 2 }}
+              initial='hidden'
+              animate='visible'
+            >
+              に加えて次の項目が必要
+            </motion.div>
           </div>
         </main>
         <Link href={'/' + (count + 1)}>
