@@ -35,7 +35,7 @@ const Page: NextPage = () => {
       initial={{ y: 1000 }}
       animate={{ y: 0 }}
       exit={{ y: -1000 }}
-      transition={{ duration: 1, times: [0, 0.5, 1] }}
+      transition={{ duration: 1.5, times: [0, 0.5, 1] }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -59,13 +59,13 @@ const Page: NextPage = () => {
               <motion.li variants={item1} className='my-10 text-5xl' transition={{ duration: 2 }}>
                 活動が計画的に行われ、職制と対話して進めているか
               </motion.li>
-              <motion.li variants={item2} transition={{ duration: 2.5 }} className='my-10 text-5xl'>
+              <motion.li variants={item2} transition={{ duration: 3 }} className='my-10 text-5xl'>
                 リーダーが定期的にパトロールし、自ら進んで5S活動を行っている
               </motion.li>
-              <motion.li variants={item3} transition={{ duration: 3 }} className='my-10 text-5xl'>
+              <motion.li variants={item3} transition={{ duration: 4 }} className='my-10 text-5xl'>
                 職場規律やルールを維持する枠割分担を決めてある（5S責任者の権限）
               </motion.li>
-              <motion.li variants={item4} transition={{ duration: 3.5 }} className='my-10 text-5xl'>
+              <motion.li variants={item4} transition={{ duration: 5 }} className='my-10 text-5xl'>
                 主旨を全員が理解し分担しているか
               </motion.li>
             </motion.ul>

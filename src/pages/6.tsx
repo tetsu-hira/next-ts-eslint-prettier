@@ -35,7 +35,7 @@ const Page: NextPage = () => {
       initial={{ y: 1000 }}
       animate={{ y: 0 }}
       exit={{ y: -1000 }}
-      transition={{ duration: 1, times: [0, 0.5, 1] }}
+      transition={{ duration: 1.5, times: [0, 0.5, 1] }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -59,7 +59,7 @@ const Page: NextPage = () => {
               <motion.li variants={item1} className='my-10 text-5xl' transition={{ duration: 2 }}>
                 対象物（エリアを立体的に補える）のゴミ・埃・汚れ・配線・配管類等の不具合の改善がされている
               </motion.li>
-              <motion.li variants={item2} className='my-10 text-5xl' transition={{ duration: 2.5 }}>
+              <motion.li variants={item2} className='my-10 text-5xl' transition={{ duration: 3 }}>
                 清掃時間が定期的にとられており全員が参加して実施している
               </motion.li>
             </motion.ul>
