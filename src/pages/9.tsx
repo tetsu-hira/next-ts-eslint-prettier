@@ -8,17 +8,33 @@ import { useState } from 'react';
 const Page: NextPage = () => {
   const [count, setCount] = useState<number>(9);
 
-  const delay = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
+  const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
+
+  const thumbnailVariants = {
+    initial: { scale: 0.9, opacity: 0 },
+    enter: { scale: 1, opacity: 1, transition },
+    animate: { opacity: 1, duration: 1 },
+    exit: {
+      // scale: 0.1,
+      opacity: 0,
+      transition: { ...transition, duration: 1.5 },
+    },
+  };
+
+  const frameVariants = {
+    hover: { scale: 0.95 },
+  };
+
+  const imageVariants = {
+    hover: { scale: 1.1 },
   };
 
   return (
     <motion.div
-      initial={{ x: 1500 }}
+      initial={{ opacity: 1 }}
       animate={{ x: 0 }}
-      exit={{ x: -1500 }}
-      transition={{ duration: 1, times: [0, 0.2, 1] }}
+      exit='exit'
+      transition={{ duration: 1 }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -31,10 +47,18 @@ const Page: NextPage = () => {
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
         <main className='flex items-center w-full h-screen bg-slate-100'>
-          <div className='m-auto text-center'>
+          <motion.div
+            className='m-auto text-center'
+            variants={thumbnailVariants}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+            }}
+          >
             <div className='text-6xl'>銀賞獲得の為に</div>
             <div className='my-10 text-9xl'>行ってきた取り組み</div>
-          </div>
+          </motion.div>
         </main>
         <Link href={'/' + (count + 1)}>
           <a className='flex right-0 items-center h-screen text-9xl text-blue-400 bg-slate-100'>

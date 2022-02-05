@@ -8,34 +8,50 @@ import { useState } from 'react';
 const Page: NextPage = () => {
   const [count, setCount] = useState<number>(5);
 
+  const itemTitle: string = '３．整理状況';
+  const itemList: string[] = [
+    '不要品処理ルールの維持が出来ている',
+    '定期的な不具合の発見、改善が継続して行われている',
+  ];
+  console.log(itemList);
+
+  const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
+
+  const thumbnailVariants = {
+    initial: { scale: 0.9, opacity: 0 },
+    enter: { scale: 1, opacity: 1, transition },
+    animate: { opacity: 1, duration: 1 },
+    exit: {
+      // scale: 0.1,
+      opacity: 0,
+      transition: { ...transition, duration: 1.5 },
+    },
+  };
+
+  const frameVariants = {
+    hover: { scale: 0.95 },
+  };
+
+  const imageVariants = {
+    hover: { scale: 1.1 },
+  };
+
   const list = {
     visible: { opacity: 1 },
     hidden: { opacity: 0 },
   };
 
-  const item1 = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -1000 },
-  };
-  const item2 = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -1000 },
-  };
-  const item3 = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -1000 },
-  };
-  const item4 = {
-    visible: { opacity: 1, x: 0 },
-    hidden: { opacity: 0, x: -1000 },
+  const num = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -1000 },
   };
 
   return (
     <motion.div
-      initial={{ x: 1500 }}
+      initial={{ opacity: 1 }}
       animate={{ x: 0 }}
-      exit={{ x: -1500 }}
-      transition={{ duration: 1, times: [0, 0.2, 1] }}
+      exit='exit'
+      transition={{ duration: 1 }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -48,22 +64,34 @@ const Page: NextPage = () => {
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
         <main className='flex items-center w-full h-screen bg-slate-100'>
-          <div className='m-auto w-full'>
-            <div className='mb-20 text-7xl text-center'>３．整理状況</div>
+          <motion.div
+            className='pt-48 m-auto mt-0 w-full'
+            variants={thumbnailVariants}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+            }}
+          >
+            <div className='mb-20 text-7xl'>{itemTitle}</div>
             <motion.ul
               initial='hidden'
               animate='visible'
               variants={list}
               className='m-auto w-5/6 list-disc'
             >
-              <motion.li variants={item1} transition={{ duration: 3 }} className='my-10 text-5xl'>
-                不要品処理ルールの維持が出来ている
-              </motion.li>
-              <motion.li variants={item2} transition={{ duration: 4 }} className='my-10 text-5xl'>
-                定期的な不具合の発見、改善が継続して行われている
-              </motion.li>
+              {itemList.map((item, index) => (
+                <motion.li
+                  key={item}
+                  variants={num}
+                  className='my-10 text-5xl'
+                  transition={{ duration: 1, delay: index * 2 + 2 }}
+                >
+                  {item}
+                </motion.li>
+              ))}
             </motion.ul>
-          </div>
+          </motion.div>
         </main>
         <Link href={'/' + (count + 1)}>
           <a className='flex right-0 items-center h-screen text-9xl text-blue-400 bg-slate-100'>

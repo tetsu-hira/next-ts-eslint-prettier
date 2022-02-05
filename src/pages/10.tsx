@@ -8,15 +8,24 @@ import { useState } from 'react';
 const Page: NextPage = () => {
   const [count, setCount] = useState<number>(10);
 
+  const itemTitle: string = '１．取り組み状況';
+  const itemList: string[] = [
+    '活動が計画的に行われ、職制と対話して進めているか',
+    'リーダーが定期的にパトロールし、自ら進んで5S活動を行っている',
+    '職場規律やルールを維持する枠割分担を決めてある（5S責任者の権限）',
+    '主旨を全員が理解し分担しているか',
+  ];
+
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
   const thumbnailVariants = {
     initial: { scale: 0.9, opacity: 0 },
     enter: { scale: 1, opacity: 1, transition },
+    animate: { opacity: 1, duration: 1 },
     exit: {
-      scale: 0.5,
+      // scale: 0.1,
       opacity: 0,
-      transition: { ...transition, duration: 1 },
+      transition: { ...transition, duration: 1.5 },
     },
   };
 
@@ -28,12 +37,38 @@ const Page: NextPage = () => {
     hover: { scale: 1.1 },
   };
 
+  const list = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+  const num1 = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -1000 },
+    exit: { opacity: 1 },
+  };
+  const num2 = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -1000 },
+    exit: { scale: 1.5 },
+  };
+  const num3 = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -1000 },
+    exit: { scale: 1.5 },
+  };
+  const num4 = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -1000 },
+    exit: { scale: 1.5 },
+  };
+
   return (
     <motion.div
-      initial={{ x: 1500 }}
+      initial={{ opacity: 1 }}
       animate={{ x: 0 }}
-      exit={{ x: -1500 }}
-      transition={{ duration: 1, times: [0, 0.2, 1] }}
+      exit='exit'
+      transition={{ duration: 1 }}
     >
       <Head>
         <title>5S活動発表</title>
@@ -46,70 +81,40 @@ const Page: NextPage = () => {
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
         <main className='flex items-center w-full h-screen bg-slate-100'>
-          <motion.div variants={thumbnailVariants} className='m-auto w-full'>
-            <motion.div className='mb-20 text-7xl text-center'>１．取り組み状況</motion.div>
+          <motion.div
+            className='pt-48 m-auto mt-0 w-full'
+            variants={thumbnailVariants}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+            }}
+          >
+            <div className='mb-20 text-7xl'>{itemTitle}</div>
             <motion.ul className='m-auto w-5/6 list-disc' variants={thumbnailVariants}>
-              <motion.li
-                className='my-10 text-5xl '
-                initial='initial'
-                animate='enter'
-                exit='exit'
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.5 },
-                }}
-                variants={thumbnailVariants}
-                transition={transition}
-              >
-                <Link href={'/' + (count + 1)}>
-                  <a> 活動が計画的に行われ、職制と対話して進めているか</a>
-                </Link>
-              </motion.li>
-              <motion.li
-                className='my-10 text-5xl '
-                initial='initial'
-                animate='enter'
-                exit='exit'
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.5 },
-                }}
-                variants={thumbnailVariants}
-                transition={transition}
-              >
-                リーダーが定期的にパトロールし、自ら進んで5S活動を行っている
-              </motion.li>
-              <motion.li
-                className='my-10 text-5xl '
-                initial='initial'
-                animate='enter'
-                exit='exit'
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.5 },
-                }}
-                variants={thumbnailVariants}
-                transition={transition}
-              >
-                職場規律やルールを維持する枠割分担を決めてある（5S責任者の権限）
-              </motion.li>
-              <motion.li
-                className='my-10 text-5xl '
-                initial='initial'
-                animate='enter'
-                exit='exit'
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.5 },
-                }}
-                variants={thumbnailVariants}
-                transition={transition}
-              >
-                主旨を全員が理解し分担しているか
-              </motion.li>
+              {itemList.map((item, index) => (
+                <motion.li
+                  className='my-10 text-5xl hover:text-red-500'
+                  initial='initial'
+                  animate='enter'
+                  exit='exit'
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.4 },
+                  }}
+                  variants={num1}
+                  transition={transition}
+                  key={item}
+                >
+                  <Link href={'/attempt/1-' + (index + 1)}>
+                    <a> {item}</a>
+                  </Link>
+                </motion.li>
+              ))}
             </motion.ul>
           </motion.div>
         </main>
+
         <Link href={'/' + (count + 1)}>
           <a className='flex right-0 items-center h-screen text-9xl text-blue-400 bg-slate-100'>
             ▸

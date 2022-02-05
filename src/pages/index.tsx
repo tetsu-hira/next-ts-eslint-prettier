@@ -8,11 +8,31 @@ import { useState } from 'react';
 const Home: NextPage = () => {
   const [count, setCount] = useState<number>(0);
 
+  const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
+
+  const thumbnailVariants = {
+    initial: { scale: 0.9, opacity: 0 },
+    enter: { scale: 1, opacity: 1, transition },
+    exit: {
+      // scale: 0.1,
+      opacity: 0,
+      transition: { ...transition, duration: 1.5 },
+    },
+  };
+
+  const frameVariants = {
+    hover: { scale: 0.95 },
+  };
+
+  const imageVariants = {
+    hover: { scale: 1.1 },
+  };
+
   return (
     <motion.div
-      initial={{ x: 1000 }}
+      initial={{ opacity: 1 }}
       animate={{ x: 0 }}
-      exit={{ x: -2000 }}
+      exit='exit'
       transition={{ duration: 1 }}
     >
       <Head>
@@ -26,10 +46,18 @@ const Home: NextPage = () => {
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
         <main className='flex items-center w-full h-screen bg-slate-100'>
-          <div className='m-auto text-center'>
+          <motion.div
+            className='m-auto text-center'
+            variants={thumbnailVariants}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1 },
+            }}
+          >
             <div className='text-8xl'>令和３年度</div>
             <div className='text-8xl'>生産管理の5S活動発表</div>
-          </div>
+          </motion.div>
         </main>
         <Link href={'/' + (count + 1)}>
           <a className='flex right-0 items-center h-screen text-9xl text-blue-400 bg-slate-100'>
