@@ -66,7 +66,7 @@ const Page: NextPage = () => {
         </Link>
         <main className='flex items-center w-full h-screen bg-slate-100'>
           <motion.div
-            className='pt-48 m-auto mt-0 w-full'
+            className='pt-24 m-auto mt-0 w-full'
             variants={thumbnailVariants}
             initial={{ opacity: 0 }}
             animate={{

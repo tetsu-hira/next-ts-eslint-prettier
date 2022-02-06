@@ -20,6 +20,16 @@
       "static/chunks/main.js",
       "static/chunks/pages/10.js"
     ],
+    "/11": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/11.js"
+    ],
+    "/9": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/9.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,10 +40,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/attempt/1-4": [
+    "/attempt/1-1": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/attempt/1-4.js"
+      "static/chunks/pages/attempt/1-1.js"
     ]
   },
   "ampFirstPages": []
