@@ -15,7 +15,7 @@ const Page: NextPage = () => {
     enter: { scale: 1, opacity: 1, transition },
     animate: { opacity: 1, duration: 1 },
     exit: {
-      // scale: 0.1,
+      scale: 0.1,
       opacity: 0,
       transition: { ...transition, duration: 1.5 },
     },
@@ -48,29 +48,31 @@ const Page: NextPage = () => {
         </Link>
 
         <main className='items-center w-full h-screen bg-slate-100'>
-          <motion.div
-            className='pt-24 pb-12 m-auto mt-0 w-full text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
-            initial={{ scale: 0.1, opacity: 0 }}
-            animate={{ opacity: 1, y: [300, 300, 0], scale: [0.3, 1, 1], color: [] }}
-            transition={{ duration: 2, times: [0.1, 0.6, 1] }}
-          >
-            職場規律やルールを維持する枠割分担を決めてある（5S責任者の権限）
-          </motion.div>
-          <motion.div
-            className='m-auto text-5xl text-center rotate-90'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-          >
-            ➡
-          </motion.div>
-          <motion.div
-            className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-          >
-            未実施のため、次回の生産管理グループの5S会議にて議題として挙げる予定で計画
+          <motion.div variants={thumbnailVariants} className='h-full'>
+            <motion.div
+              className='pt-24 pb-12 m-auto mt-0 w-full text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              initial={{ scale: 0.1, opacity: 0 }}
+              animate={{ opacity: 1, y: [300, 300, 0], scale: [0.3, 1, 1], color: [] }}
+              transition={{ duration: 2, times: [0.1, 0.6, 1] }}
+            >
+              職場規律やルールを維持する枠割分担を決めてある（5S責任者の権限）
+            </motion.div>
+            <motion.div
+              className='m-auto text-5xl text-center rotate-90'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
+              ➡
+            </motion.div>
+            <motion.div
+              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
+              未実施のため、次回の生産管理グループの5S会議にて議題として挙げる予定で計画
+            </motion.div>
           </motion.div>
         </main>
 

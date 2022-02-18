@@ -15,7 +15,7 @@ const Page: NextPage = () => {
     enter: { scale: 1, opacity: 1, transition },
     animate: { opacity: 1, duration: 1 },
     exit: {
-      // scale: 0.1,
+      scale: 0.1,
       opacity: 0,
       transition: { ...transition, duration: 1.5 },
     },
@@ -47,38 +47,40 @@ const Page: NextPage = () => {
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
 
-        <main className='items-center w-full h-screen bg-slate-100'>
-          <motion.div
-            className='pt-24 pb-12 m-auto mt-0 w-full text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
-            initial={{ scale: 0.1, opacity: 0 }}
-            animate={{ opacity: 1, y: [300, 300, 0], scale: [0.3, 1, 1], color: [] }}
-            transition={{ duration: 2, times: [0.1, 0.6, 1] }}
-          >
-            活動が計画的に行われ、職制と対話して進めているか
-          </motion.div>
-          <motion.div
-            className='m-auto text-5xl text-center rotate-90'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-          >
-            ➡
-          </motion.div>
-          <motion.div
-            className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-          >
-            １カ月に一度は生産管理グループ全員で5S会議を行い、対策箇所を話し合ったり、活動計画を立てて実施
-          </motion.div>
-          <motion.div
-            className='block m-auto mt-6 w-full text-center'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-          >
-            <Image src='/1-1.jpg' width={600} height={450} alt='test' />
+        <main className='items-center m-auto w-full h-screen bg-slate-100'>
+          <motion.div variants={thumbnailVariants}>
+            <motion.div
+              className='pt-20 pb-12 m-auto mt-0 w-full text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              initial={{ scale: 0.1, opacity: 0 }}
+              animate={{ opacity: 1, y: [300, 300, 0], scale: [0.3, 1, 1], color: [] }}
+              transition={{ duration: 2, times: [0.1, 0.6, 1] }}
+            >
+              活動が計画的に行われ、職制と対話して進めているか
+            </motion.div>
+            <motion.div
+              className='m-auto text-5xl text-center rotate-90'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
+              ➡
+            </motion.div>
+            <motion.div
+              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
+              １カ月に一度は生産管理グループ全員で5S会議を行い、対策箇所を話し合ったり、活動計画を立てて実施
+            </motion.div>
+            <motion.div
+              className='block m-auto mt-6 w-full text-center'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 2, duration: 1 }}
+            >
+              <Image src='/1-1.jpg' width={600} height={450} alt='test' />
+            </motion.div>
           </motion.div>
         </main>
 

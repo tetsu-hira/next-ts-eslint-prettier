@@ -13,7 +13,6 @@ const Page: NextPage = () => {
     '対象物（エリアを立体的に捕える）のゴミ・埃・汚れ・配線・配管類等の不具合の改善がされている',
     '清掃時間が定期的にとられており全員が参加して実施している',
   ];
-  console.log(itemList);
 
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -84,7 +83,7 @@ const Page: NextPage = () => {
                 <motion.li
                   key={item}
                   variants={num}
-                  className='my-10 text-5xl'
+                  className='my-20 text-5xl'
                   transition={{ duration: 1, delay: index * 2 + 2 }}
                 >
                   {item}

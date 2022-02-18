@@ -80,6 +80,7 @@ const Page: NextPage = () => {
         <Link href={'/' + (count - 1)}>
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
+
         <main className='flex items-center w-full h-screen bg-slate-100'>
           <motion.div
             className='pt-48 m-auto mt-0 w-full'
@@ -94,7 +95,7 @@ const Page: NextPage = () => {
             <motion.ul className='m-auto w-5/6 list-disc' variants={thumbnailVariants}>
               {itemList.map((item, index) => (
                 <motion.li
-                  className='my-10 text-5xl hover:text-red-500'
+                  className='my-20 text-5xl hover:text-red-500'
                   initial='initial'
                   animate='enter'
                   exit='exit'

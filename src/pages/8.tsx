@@ -10,7 +10,6 @@ const Page: NextPage = () => {
 
   const itemTitle: string = '６．清潔・躾状況';
   const itemList: string[] = ['維持管理ルールの作成に着手している'];
-  console.log(itemList);
 
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -81,7 +80,7 @@ const Page: NextPage = () => {
                 <motion.li
                   key={item}
                   variants={num}
-                  className='my-10 text-5xl'
+                  className='my-20 text-5xl'
                   transition={{ duration: 1, delay: index * 2 + 2 }}
                 >
                   {item}

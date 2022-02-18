@@ -13,7 +13,6 @@ const Page: NextPage = () => {
     '不要品処理ルールの維持が出来ている',
     '定期的な不具合の発見、改善が継続して行われている',
   ];
-  console.log(itemList);
 
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -84,7 +83,7 @@ const Page: NextPage = () => {
                 <motion.li
                   key={item}
                   variants={num}
-                  className='my-10 text-5xl'
+                  className='my-20 text-5xl'
                   transition={{ duration: 1, delay: index * 2 + 2 }}
                 >
                   {item}

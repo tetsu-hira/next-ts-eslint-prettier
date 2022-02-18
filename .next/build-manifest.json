@@ -25,6 +25,16 @@
       "static/chunks/main.js",
       "static/chunks/pages/11.js"
     ],
+    "/7": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/7.js"
+    ],
+    "/8": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/8.js"
+    ],
     "/9": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -44,6 +54,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/attempt/1-1.js"
+    ],
+    "/attempt/1-2": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/attempt/1-2.js"
     ]
   },
   "ampFirstPages": []

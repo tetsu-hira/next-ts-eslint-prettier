@@ -21,7 +21,7 @@ const Page: NextPage = () => {
     enter: { scale: 1, opacity: 1, transition },
     animate: { opacity: 1, duration: 1 },
     exit: {
-      scale: 0.1,
+      // scale: 0.1,
       opacity: 0,
       transition: { ...transition, duration: 1.5 },
     },
@@ -78,6 +78,7 @@ const Page: NextPage = () => {
         <Link href={'/' + (count - 1)}>
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
+
         <main className='flex items-center w-full h-screen bg-slate-100'>
           <motion.div
             className='pt-48 m-auto mt-0 w-full'
@@ -92,7 +93,7 @@ const Page: NextPage = () => {
             <motion.ul className='m-auto w-5/6 list-disc' variants={thumbnailVariants}>
               {itemList.map((item, index) => (
                 <motion.li
-                  className='my-10 text-5xl hover:text-red-500'
+                  className='my-20 text-5xl hover:text-red-500'
                   initial='initial'
                   animate='enter'
                   exit='exit'
@@ -104,7 +105,7 @@ const Page: NextPage = () => {
                   transition={transition}
                   key={item}
                 >
-                  <Link href={'/attempt/1-' + (index + 1)}>
+                  <Link href={'/attempt/2-' + (index + 1)}>
                     <a> {item}</a>
                   </Link>
                 </motion.li>
@@ -112,6 +113,7 @@ const Page: NextPage = () => {
             </motion.ul>
           </motion.div>
         </main>
+
         <Link href={'/' + (count + 1)}>
           <a className='flex right-0 items-center h-screen text-9xl text-blue-400 bg-slate-100'>
             ▸

@@ -14,7 +14,6 @@ const Page: NextPage = () => {
     '共用書類、本類のロケーション不具合の改善もされている',
     'ロケーションごとの責任者は明示されており、責任者の任務が実施されている',
   ];
-  console.log(itemList);
 
   const transition = { duration: 0.5, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -85,7 +84,7 @@ const Page: NextPage = () => {
                 <motion.li
                   key={item}
                   variants={num}
-                  className='my-10 text-5xl'
+                  className='my-20 text-5xl'
                   transition={{ duration: 1, delay: index * 2 + 2 }}
                 >
                   {item}
