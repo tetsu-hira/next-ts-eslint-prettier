@@ -66,21 +66,33 @@ const Page: NextPage = () => {
               ➡
             </motion.div>
             <motion.div
-              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              className='pt-24 pb-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
+              transition={{ delay: 3, duration: 1 }}
             >
-              生産管理の業務にて発生した紙の資料は2年間保管し、その後処分するものとしてルールを定めた
+              5S委員会の中でデータの保存についての話が挙がった時に
+              <br />
+              紙の資料についての保存ルールが定まっているのか指摘があった
             </motion.div>
-            {/* <motion.div
-              className='block m-auto mt-6 w-full text-center'
+            <motion.div
+              className='m-auto text-5xl text-center rotate-90'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
+              transition={{ delay: 5, duration: 1 }}
             >
-              <Image src='/1-1.jpg' width={600} height={450} alt='test' />
-            </motion.div> */}
+              ➡
+            </motion.div>
+            <motion.div
+              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 6, duration: 1 }}
+            >
+              生産管理の業務にて発生した紙の資料は2年間保管し
+              <br />
+              その後処分するものとして処理ルールを定めた
+            </motion.div>
           </motion.div>
         </main>
 

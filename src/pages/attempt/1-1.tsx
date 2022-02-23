@@ -71,16 +71,28 @@ const Page: NextPage = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
             >
-              １カ月に一度は生産管理グループ全員で5S会議を行い、対策箇所を話し合ったり、活動計画を立てて実施
+              一か月に一度、生産管理グループ全員で5S会議を行い、
+              <br />
+              対策箇所を話し合ったり、活動計画を立てて毎月実施している
             </motion.div>
-            <motion.div
-              className='block m-auto mt-6 w-full text-center'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
-            >
-              <Image src='/1-1.jpg' width={600} height={450} alt='test' />
-            </motion.div>
+            <div className='flex'>
+              <motion.div
+                className='block m-auto mt-16 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 1 }}
+              >
+                <Image src='/1-1.jpg' width={600} height={450} alt='test' />
+              </motion.div>
+              <motion.div
+                className='block m-auto mt-16 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 5, duration: 1 }}
+              >
+                <Image src='/1-2.jpg' width={600} height={450} alt='test' />
+              </motion.div>
+            </div>
           </motion.div>
         </main>
 

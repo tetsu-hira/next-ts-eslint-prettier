@@ -15,30 +15,25 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/10": [
+    "/15": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/10.js"
+      "static/chunks/pages/15.js"
     ],
-    "/11": [
+    "/16": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/11.js"
+      "static/chunks/pages/16.js"
     ],
-    "/7": [
+    "/17": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/7.js"
+      "static/chunks/pages/17.js"
     ],
-    "/8": [
+    "/18": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/8.js"
-    ],
-    "/9": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/9.js"
+      "static/chunks/pages/18.js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -49,16 +44,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/attempt/1-1": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/attempt/1-1.js"
-    ],
-    "/attempt/1-2": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/attempt/1-2.js"
     ]
   },
   "ampFirstPages": []

@@ -46,9 +46,9 @@ const Page: NextPage = () => {
         <Link href={'/' + (count - 1)}>
           <a className='flex items-center h-screen text-9xl text-blue-400 bg-slate-100'>◂</a>
         </Link>
-        <main className='flex items-center w-full h-screen bg-slate-100'>
+        <main className='flex items-center m-auto w-full h-screen text-center bg-slate-100'>
           <motion.div
-            className='m-auto text-center'
+            className='my-auto mr-8 ml-auto text-center'
             variants={thumbnailVariants}
             initial={{ opacity: 0 }}
             animate={{
@@ -56,7 +56,29 @@ const Page: NextPage = () => {
               transition: { duration: 1 },
             }}
           >
-            <div className='my-10 text-9xl'>まとめ</div>
+            <div className='my-10 text-9xl'>ま</div>
+          </motion.div>
+          <motion.div
+            className='my-auto mx-8 text-center'
+            variants={thumbnailVariants}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1, delay: 0.5 },
+            }}
+          >
+            <div className='my-10 text-9xl'>と</div>
+          </motion.div>
+          <motion.div
+            className='my-auto mr-auto ml-8 text-center'
+            variants={thumbnailVariants}
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { duration: 1, delay: 1 },
+            }}
+          >
+            <div className='my-10 text-9xl'>め</div>
           </motion.div>
         </main>
         <Link href={'/' + (count + 1)}>

@@ -66,12 +66,14 @@ const Page: NextPage = () => {
               ➡
             </motion.div>
             <motion.div
-              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
             >
-              生産管理室内には危険有害物に認定されるものは置いていないため、問題なし
+              生産管理室内には危険有害物に認定されるものは置いていないため
+              <br />
+              生産管理グループでの5S会議にて対策は必要ないと判断した
             </motion.div>
             {/* <motion.div
               className='block m-auto mt-6 w-full text-center'

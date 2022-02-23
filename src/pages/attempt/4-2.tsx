@@ -66,21 +66,33 @@ const Page: NextPage = () => {
               ➡
             </motion.div>
             <motion.div
-              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
             >
-              清掃当番を週替わりで交替し、週末には各自が当番となっている箇所の掃除を行っている
+              清掃当番を週替わりで交替し
+              <br />
+              週末には各自が当番となっている箇所の掃除を行っている
             </motion.div>
-            <motion.div
-              className='block m-auto mt-6 w-full text-center'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
-            >
-              <Image src='/4-2.jpg' width={600} height={450} alt='4-2' />
-            </motion.div>
+            <div className='flex'>
+              <motion.div
+                className='block m-auto mt-16 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 1 }}
+              >
+                <Image src='/4-2-1.jpg' width={600} height={450} alt='4-2' />
+              </motion.div>
+              <motion.div
+                className='block m-auto mt-16 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 5, duration: 1 }}
+              >
+                <Image src='/4-2-2.jpg' width={600} height={450} alt='4-2' />
+              </motion.div>
+            </div>
           </motion.div>
         </main>
 

@@ -71,16 +71,26 @@ const Page: NextPage = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
             >
-              月に一度、5Sパトロールを当番と一緒に実施
+              月に一度、5Sパトロールをパトロール当番と一緒に実施
             </motion.div>
-            <motion.div
-              className='block m-auto mt-6 w-full text-center'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
-            >
-              <Image src='/1-1.jpg' width={600} height={450} alt='test' />
-            </motion.div>
+            <div className='flex'>
+              <motion.div
+                className='block m-auto mt-16 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 1 }}
+              >
+                <Image src='/1-2-1.jpg' width={600} height={450} alt='test' />
+              </motion.div>
+              <motion.div
+                className='block m-auto mt-16 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 5, duration: 1 }}
+              >
+                <Image src='/1-2-2.jpg' width={600} height={450} alt='test' />
+              </motion.div>
+            </div>
           </motion.div>
         </main>
         <Link href={'/' + (count + 1)}>

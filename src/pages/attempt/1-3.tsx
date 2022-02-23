@@ -66,12 +66,32 @@ const Page: NextPage = () => {
               ➡
             </motion.div>
             <motion.div
+              className='pt-24 pb-12 m-auto mt-0 w-full text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 3, duration: 1 }}
+            >
+              職場規律やルールについては人数も少ないため
+              <br />
+              暗黙の了解や過去からの引継ぎで回っていた部分が大きい
+            </motion.div>
+            <motion.div
+              className='m-auto text-5xl text-center rotate-90'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 5, duration: 1 }}
+            >
+              ➡
+            </motion.div>
+            <motion.div
               className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
+              transition={{ delay: 6, duration: 1 }}
             >
-              未実施のため、次回の生産管理グループの5S会議にて議題として挙げる予定で計画
+              活動としては未実施のため、次回の生産管理グループの5S会議にて
+              <br />
+              5S活動の一貫としてルールを決めるか話し合う事を計画中
             </motion.div>
           </motion.div>
         </main>

@@ -55,7 +55,9 @@ const Page: NextPage = () => {
               animate={{ opacity: 1, y: [300, 300, 0], scale: [0.3, 1, 1], color: [] }}
               transition={{ duration: 2, times: [0.1, 0.6, 1] }}
             >
-              対象物（エリアを立体的に捕える）のゴミ・埃・汚れ・配線・配管類等の不具合の改善がされている
+              対象物（エリアを立体的に捕える）のゴミ・埃・汚れ・配線・配管類等の
+              <br />
+              不具合の改善がされている
             </motion.div>
             <motion.div
               className='m-auto text-5xl text-center rotate-90'
@@ -66,21 +68,33 @@ const Page: NextPage = () => {
               ➡
             </motion.div>
             <motion.div
-              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center underline underline-offset-4'
+              className='pt-12 m-auto text-5xl font-bold leading-relaxed text-center text-red-500 underline underline-offset-4'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
             >
-              5Sパトロールにて配線類についての指摘が挙がったため、各自の配線類を再度見直し、床下を這わせて改善を行った
+              5Sパトロールにて配線類についての指摘が挙がったため
+              <br />
+              各自の配線類を再度見直し、床下を這わせて改善を行った
             </motion.div>
-            {/* <motion.div
-              className='block m-auto mt-6 w-full text-center'
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 1 }}
-            >
-              <Image src='/1-1.jpg' width={600} height={450} alt='test' />
-            </motion.div> */}
+            <div className='flex'>
+              <motion.div
+                className='block m-auto mt-6 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 4, duration: 1 }}
+              >
+                <Image src='/4-1-1.jpg' width={600} height={450} alt='test' />
+              </motion.div>
+              <motion.div
+                className='block m-auto mt-6 w-full text-center'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 5, duration: 1 }}
+              >
+                <Image src='/4-1-2.jpg' width={600} height={450} alt='test' />
+              </motion.div>
+            </div>
           </motion.div>
         </main>
 
